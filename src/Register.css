@@ -1,0 +1,87 @@
+.register {
+    display: flex;
+    padding: 64px;
+}
+.register-box {
+    margin: auto;
+}
+
+.form-container {
+    width: 440px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #24272C;
+    color: white;
+    position: relative;
+}
+
+.form-container div {
+    margin-bottom: 10px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #24272C;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.form-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.form-container button:hover {
+    background-color: darkorange;
+}
+
+.error {
+    color: indianred;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.captcha {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
