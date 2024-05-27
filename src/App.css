@@ -90,7 +90,7 @@ html {
 .register-button {
     color: #070809;
     margin: 0 20px;
-    background-color: orange;
+    background-color: #006AFF;
 }
 
 .login-button:hover {
@@ -98,7 +98,7 @@ html {
 }
 
 .register-button:hover {
-    background-color: darkorange;
+    background-color: #0051CB;
 }
 
 .search-bar {
@@ -115,7 +115,7 @@ html {
 }
 
 .search-bar:hover {
-    border-color: orange;
+    border-color: #006AFF;
 }
 
 .search-icon {
@@ -173,7 +173,7 @@ html {
 }
 
 .category-item:hover {
-    border-color: orange;
+    border-color: #006AFF;
 }
 
 .category-item-name {
@@ -610,7 +610,7 @@ html {
 }
 
 .product-box:hover {
-    border: 1px solid orange;
+    border: 1px solid #006AFF;
     /*border: 1px solid white;*/
 }
 

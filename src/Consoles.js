@@ -13,9 +13,7 @@ function Consoles() {
             <div className="header">
                 <div className="header-container">
                     <div className="logo-margin">
-                        <Link to="http://localhost:3000/">
-                            <img className="logo" src={logo} alt="logo"/>
-                        </Link>
+                        <img className="logo" src={logo} alt="logo"/>
                     </div>
                     <div className="search-bar-margin">
                         <button className="search-bar">
