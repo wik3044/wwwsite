@@ -24,6 +24,15 @@ import {MdDateRange} from "react-icons/md";
 import {BiSolidLike} from "react-icons/bi";
 import {AiOutlineClear} from "react-icons/ai";
 import { Link } from "react-router-dom";
+import boombox from './Icons/boombox.png'
+import gramofon from './Icons/gramofon.png'
+import majestic from './Icons/majestic.png'
+import sonywalker from './Icons/sonywalker.png'
+import xbox1 from './Icons/xbox1.png'
+import retrocassete from './Icons/retrocassete.png'
+import gamecube from './Icons/gamecube.png'
+import gameboy from './Icons/gameboy.png'
+import system from './Icons/system.png'
 
 function App() {
     // const navigate = useNavigate();
@@ -194,10 +203,11 @@ function App() {
                                 <img src={xbox} className="product-image" alt="xbox"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">Konsola xbox 360</p>
+                                <p className="title-text">Konsola Xbox 360</p>
                             </div>
                             <div className="product-price">
-                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b className="pogrubienie">77 zł</b> / miesiąc</p>
+                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                    className="pogrubienie">77 zł</b> / miesiąc</p>
                                 <p className="price-text">lub 84 zł / 7 dni</p>
                             </div>
                         </div>
@@ -234,9 +244,54 @@ function App() {
                             </div>
                         </div>
                     </div>
-                    <div className="consoles-item">Duis ac nunc sed massa.</div>
-                    <div className="consoles-item">Duis ac nunc sed massa.</div>
-                    <div className="consoles-item">Duis ac nunc sed massa.</div>
+                    <div className="consoles-item">
+                        <div className="product-box">
+                            <div className="product-sale-status"></div>
+                            <div className="product-image-box">
+                                <img src={gamecube} className="product-image" alt="gamecube"></img>
+                            </div>
+                            <div className="product-title">
+                                <p className="title-text">Nintendo GameCube</p>
+                            </div>
+                            <div className="product-price">
+                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                    className="pogrubienie">77 zł</b> / miesiąc</p>
+                                <p className="price-text">lub 84 zł / 7 dni</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="consoles-item">
+                        <div className="product-box">
+                            <div className="product-sale-status"></div>
+                            <div className="product-image-box">
+                                <img src={gameboy} className="product-image" alt="gameboy"></img>
+                            </div>
+                            <div className="product-title">
+                                <p className="title-text">Nintendo GameBoy</p>
+                            </div>
+                            <div className="product-price">
+                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                    className="pogrubienie">77 zł</b> / miesiąc</p>
+                                <p className="price-text">lub 84 zł / 7 dni</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="consoles-item">
+                        <div className="product-box">
+                            <div className="product-sale-status"></div>
+                            <div className="product-image-box">
+                                <img src={xbox1} className="product-image" alt="xbox1"></img>
+                            </div>
+                            <div className="product-title">
+                                <p className="title-text">Konsola Xbox</p>
+                            </div>
+                            <div className="product-price">
+                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                    className="pogrubienie">77 zł</b> / miesiąc</p>
+                                <p className="price-text">lub 84 zł / 7 dni</p>
+                            </div>
+                        </div>
+                    </div>
                 </Slider>
             </div>
             <div className="audio-container">
@@ -253,12 +308,102 @@ function App() {
                     </div>
                 </div>
                 <Slider ref={sliderRefs.audio} className="slider2" {...multipleItemSettings}>
-                    <div className="audio-item">Lorem ipsum dolor sit amet.</div>
-                    <div className="audio-item">Duis ac nunc sed massa.</div>
-                    <div className="audio-item">Duis ac nunc sed massa.</div>
-                    <div className="audio-item">Duis ac nunc sed massa.</div>
-                    <div className="audio-item">Duis ac nunc sed massa.</div>
-                    <div className="audio-item">Duis ac nunc sed massa.</div>
+                    <div className="consoles-item">
+                        <div className="product-box">
+                            <div className="product-sale-status"></div>
+                            <div className="product-image-box">
+                                <img src={majestic} className="product-image" alt="majestic"></img>
+                            </div>
+                            <div className="product-title">
+                                <p className="title-text">Zestaw Stereo "Majestic"</p>
+                            </div>
+                            <div className="product-price">
+                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                    className="pogrubienie">77 zł</b> / miesiąc</p>
+                                <p className="price-text">lub 84 zł / 7 dni</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="consoles-item">
+                        <div className="product-box">
+                            <div className="product-sale-status"></div>
+                            <div className="product-image-box">
+                                <img src={boombox} className="product-image" alt="boombox"></img>
+                            </div>
+                            <div className="product-title">
+                                <p className="title-text">Lasonic L30K Boombox</p>
+                            </div>
+                            <div className="product-price">
+                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                    className="pogrubienie">77 zł</b> / miesiąc</p>
+                                <p className="price-text">lub 84 zł / 7 dni</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="consoles-item">
+                        <div className="product-box">
+                            <div className="product-sale-status"></div>
+                            <div className="product-image-box">
+                                <img src={sonywalker} className="product-image" alt="sonywalker"></img>
+                            </div>
+                            <div className="product-title">
+                                <p className="title-text">Sony Walkman</p>
+                            </div>
+                            <div className="product-price">
+                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                    className="pogrubienie">77 zł</b> / miesiąc</p>
+                                <p className="price-text">lub 84 zł / 7 dni</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="consoles-item">
+                        <div className="product-box">
+                            <div className="product-sale-status"></div>
+                            <div className="product-image-box">
+                                <img src={gramofon} className="product-image" alt="gramofon"></img>
+                            </div>
+                            <div className="product-title">
+                                <p className="title-text">Gramofon 1ByOne</p>
+                            </div>
+                            <div className="product-price">
+                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                    className="pogrubienie">77 zł</b> / miesiąc</p>
+                                <p className="price-text">lub 84 zł / 7 dni</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="consoles-item">
+                        <div className="product-box">
+                            <div className="product-sale-status"></div>
+                            <div className="product-image-box">
+                                <img src={retrocassete} className="product-image" alt="retrocassete"></img>
+                            </div>
+                            <div className="product-title">
+                                <p className="title-text">QFX RETRO-39 Casette Player</p>
+                            </div>
+                            <div className="product-price">
+                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                    className="pogrubienie">77 zł</b> / miesiąc</p>
+                                <p className="price-text">lub 84 zł / 7 dni</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="consoles-item">
+                        <div className="product-box">
+                            <div className="product-sale-status"></div>
+                            <div className="product-image-box">
+                                <img src={system} className="product-image" alt="system"></img>
+                            </div>
+                            <div className="product-title">
+                                <p className="title-text">System Stereo OCDR2</p>
+                            </div>
+                            <div className="product-price">
+                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                    className="pogrubienie">77 zł</b> / miesiąc</p>
+                                <p className="price-text">lub 84 zł / 7 dni</p>
+                            </div>
+                        </div>
+                    </div>
                 </Slider>
             </div>
             <div className="video-container">
