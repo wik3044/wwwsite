@@ -635,14 +635,8 @@ html {
 .product-title {
     position: absolute;
     bottom: 0;
-    margin-bottom: 110px;
+    margin-bottom: 85px;
     font-weight: 600;
-}
-
-.product-description {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 88px;
 }
 
 .product-price {

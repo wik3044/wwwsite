@@ -74,7 +74,9 @@ function App() {
             <div className="header">
                 <div className="header-container">
                     <div className="logo-margin">
-                        <img className="logo" src={logo} alt="logo" />
+                        <Link to="http://localhost:3000/">
+                            <img className="logo" src={logo} alt="logo"/>
+                        </Link>
                     </div>
                     <div className="search-bar-margin">
                         <button className="search-bar">
@@ -83,18 +85,22 @@ function App() {
                         </button>
                     </div>
                     <div className="activity-container">
-                        <button className="login-button">Zaloguj się</button>
+                        <Link to="/Login">
+                            <button className="login-button">Zaloguj się</button>
+                        </Link>
                         <Link to="/register">
-                            <button className="register-button">Zarejestruj się</button>
+                        <button className="register-button">Zarejestruj się</button>
                         </Link>
                     </div>
                 </div>
             </div>
             <div className="categories">
                 <div className="categories-container">
-                    <div className="category-item">
-                        <h3 className="category-item-name">Konsole</h3>
-                    </div>
+                    <Link to="Consoles">
+                        <div className="category-item">
+                            <h3 className="category-item-name">Konsole</h3>
+                        </div>
+                    </Link>
                     <div className="category-item">
                         <h3 className="category-item-name">Sprzęt audio</h3>
                     </div>
@@ -192,9 +198,6 @@ function App() {
                             <div className="product-title">
                                 <p className="title-text">Konsola xbox 360</p>
                             </div>
-                            <div className="product-description">
-                                <p className="description-text">Tu jakis opis produktu</p>
-                            </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b className="pogrubienie">77 zł</b> / miesiąc</p>
                                 <p className="price-text">lub 84 zł / 7 dni</p>
@@ -209,9 +212,6 @@ function App() {
                             </div>
                             <div className="product-title">
                                 <p className="title-text">Konsola PlayStation 3</p>
-                            </div>
-                            <div className="product-description">
-                                <p className="description-text">Tu jakis opis produktu</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -228,9 +228,6 @@ function App() {
                             </div>
                             <div className="product-title">
                                 <p className="title-text">Konsola PlayStation 4</p>
-                            </div>
-                            <div className="product-description">
-                                <p className="description-text">Tu jakis opis produktu</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -514,10 +511,18 @@ function App() {
                 </div>
             </div>
             <div className="socials">
-                <FaFacebookSquare className="socials-icon"/>
-                <FaInstagramSquare className="socials-icon"/>
-                <FaSquareXTwitter className="socials-icon"/>
-                <FaLinkedin className="socials-icon"/>
+                <Link to="https://www.facebook.com" target="_blank">
+                    <FaFacebookSquare className="socials-icon"/>
+                </Link>
+                <Link to="https://instagram.com" target="_blank">
+                    <FaInstagramSquare className="socials-icon"/>
+                </Link>
+                <Link to="https://www.twitter.com" target="_blank">
+                    <FaSquareXTwitter className="socials-icon"/>
+                </Link>
+                <Link to="https://pl.linkedin.com" target="_blank">
+                    <FaLinkedin className="socials-icon"/>
+                </Link>
             </div>
             <div className="copywrites">
                 <p className="copy-text">© 2024 Vintage.com S.A. Wszelkie prawa zastrzeżone Regulamin / Polityka prywatności</p>
