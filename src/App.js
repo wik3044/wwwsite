@@ -83,7 +83,9 @@ function App() {
             <div className="header">
                 <div className="header-container">
                     <div className="logo-margin">
-                        <img className="logo" src={logo} alt="logo"/>
+                        <Link to="/">
+                            <img className="logo" src={logo} alt="logo"/>
+                        </Link>
                     </div>
                     <div className="search-bar-margin">
                         <button className="search-bar">
@@ -649,7 +651,7 @@ function App() {
                 <div className="footer-box">
                 <p className="footer-text-header">Skontaktuj się</p>
                     <p className="footer-text-g">123 456 789</p>
-                    <p className="footer-text-g">help@vintage.com</p>
+                    <p className="footer-text-g">help@retrotronics.com</p>
                     <p className="footer-text-g">Pon - Pt: 9:00 - 17:00</p>
                 </div>
             </div>
