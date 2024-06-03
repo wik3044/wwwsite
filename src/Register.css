@@ -1,7 +1,3 @@
-.register {
-    display: flex;
-    padding: 64px;
-}
 .register-box {
     margin: auto;
 }
@@ -44,7 +40,7 @@
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: orange;
+    background-color: #75DDDD;
     color: black;
     border: none;
     border-radius: 5px;
@@ -55,7 +51,7 @@
 }
 
 .form-container button:hover {
-    background-color: darkorange;
+    background-color: #508991;
 }
 
 .error {
@@ -84,4 +80,9 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+}
+
+.margin {
+    height: 64px;
+    width: auto;
 }

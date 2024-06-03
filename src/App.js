@@ -1,7 +1,7 @@
 import './App.css';
 import search from './Icons/icons8-loupe-144.png';
 import logo from './Icons/retrotronics.png';
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -23,7 +23,7 @@ import ps4 from './Icons/ps4.png';
 import {MdDateRange} from "react-icons/md";
 import {BiSolidLike} from "react-icons/bi";
 import {AiOutlineClear} from "react-icons/ai";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import boombox from './Icons/boombox.png'
 import gramofon from './Icons/gramofon.png'
 import majestic from './Icons/majestic.png'
@@ -39,6 +39,11 @@ import MINOLTAXL from './Icons/MINOLTAXL-660SOUNDSUPER8CINECAMERA-removebg-previ
 import POLAROID170 from './Icons/POLAROID170BV-removebg-preview.png'
 import POLAROIDSUPER from './Icons/POLAROIDSUPERCOLOR635CL-removebg-preview.png'
 import SONYDCR from './Icons/SONYDCR-SR38HDDCAMCORDER-removebg-preview.png'
+import news1 from './Icons/news1.jpg'
+import news2 from './Icons/news2.jpg'
+import news3 from './Icons/news3.jpg'
+import news4 from './Icons/news4.jpg'
+import { FiDelete } from "react-icons/fi";
 
 function App() {
     const settings = {
@@ -82,6 +87,19 @@ function App() {
         opinions: useRef(null),
     };
 
+    const [value, setValue] = useState('');
+    const navigate = useNavigate();
+
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter' && value) {
+            navigate('/All');
+        }
+    };
+
+    const handleDelete = () => {
+        setValue('');
+    };
+
     return (
         <div className="App">
             <div className="header">
@@ -94,14 +112,20 @@ function App() {
                         </Link>
                     </div>
                     <div className="search-bar-margin">
-                        <Link to="/All" className="custom-link" onClick={() => {
-                            window.scroll(0, 0);
-                        }}>
-                            <button className="search-bar">
-                                <img src={search} className="search-icon" alt="search-icon"/>
-                                <p className="search-bar-text">Wyszukaj</p>
-                            </button>
-                        </Link>
+                        {/*<Link to="/All" className="custom-link" onClick={() => {*/}
+                        {/*    window.scroll(0, 0);*/}
+                        {/*}}>*/}
+                        {/*    <button className="search-bar">*/}
+                        {/*        <img src={search} className="search-icon" alt="search-icon"/>*/}
+                        {/*        <input className="search-bar-text"></input>*/}
+                        {/*    </button>*/}
+                        {/*</Link>*/}
+                        <button className={`search-bar ${value ? 'has-value' : ''}`}>
+                            <img src={search} className="search-icon" alt="search-icon"/>
+                            <input className="search-bar-input" value={value} onChange={(e) => setValue(e.target.value)}
+                                   placeholder="Wyszukaj" onKeyPress={handleKeyPress} ></input>
+                            {value && <FiDelete className="delete_icon" onClick={handleDelete} />}
+                        </button>
                     </div>
                     <div className="activity-container">
                         <Link to="/Login" className="custom-link" onClick={() => {
@@ -151,18 +175,16 @@ function App() {
                         <i className="material-icons">chevron_right</i>
                     </div>
                     <Slider ref={sliderRefs.news} className="slider" {...settings}>
-                        <div className="slider-margin">
-                            {/* Add your news images or content here */}
-                        </div>
-                        <div className="slider-margin">
-                            {/* Add your news images or content here */}
-                        </div>
+                        <img className="news-image" src={news1} alt={news1}></img>
+                        <img className="news-image" src={news2} alt={news2}></img>
+                        <img className="news-image" src={news3} alt={news3}></img>
+                        <img className="news-image" src={news4} alt={news4}></img>
                     </Slider>
                 </div>
             </div>
             <div className="info-container">
                 <div className="info-buttons">
-                    <div onClick={() => sliderRefs.info?.current.slickPrev()} className="info-button-prev">
+                <div onClick={() => sliderRefs.info?.current.slickPrev()} className="info-button-prev">
                         <i className="material-icons">chevron_left</i>
                     </div>
                     <div onClick={() => sliderRefs.info?.current.slickNext()} className="info-button-next">

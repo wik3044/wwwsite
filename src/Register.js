@@ -2,6 +2,9 @@ import React from "react";
 import './Register.css'
 import { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
+import {Link} from "react-router-dom";
+import logo from "./Icons/retrotronics.png";
+import search from "./Icons/icons8-loupe-144.png";
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -87,6 +90,35 @@ const Register = () => {
     return (
         <div className="register">
             <div className="register-box">
+                <div className="header">
+                    <div className="header-container">
+                        <div className="logo-margin">
+                            <Link to="/" onClick={() => {
+                                window.scroll(0, 0);
+                            }}>
+                                <img className="logo" src={logo} alt="logo"/>
+                            </Link>
+                        </div>
+                        <div className="search-bar-margin">
+                            <Link to="/All" className="custom-link" onClick={() => {
+                                window.scroll(0, 0);
+                            }}>
+                                <button className="search-bar">
+                                    <img src={search} className="search-icon" alt="search-icon"/>
+                                    <p className="search-bar-text">Wyszukaj</p>
+                                </button>
+                            </Link>
+                        </div>
+                        <div className="activity-container">
+                            <Link to="/Login" className="custom-link" onClick={() => {
+                                window.scroll(0, 0);
+                            }}>
+                                <button className="login-button">Zaloguj się</button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <div className="margin"></div>
                 <div className="register-input-box">
                     <form className="form-container" onSubmit={handleSubmit}>
                         <div className="form-row">

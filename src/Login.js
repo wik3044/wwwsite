@@ -2,6 +2,9 @@ import React from "react";
 import './Login.css'
 import { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
+import {Link} from "react-router-dom";
+import logo from "./Icons/retrotronics.png";
+import search from "./Icons/icons8-loupe-144.png";
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -78,6 +81,35 @@ const Login = () => {
 
     return (
         <div className="login">
+            <div className="header">
+                <div className="header-container">
+                    <div className="logo-margin">
+                        <Link to="/" onClick={() => {
+                            window.scroll(0, 0);
+                        }}>
+                            <img className="logo" src={logo} alt="logo"/>
+                        </Link>
+                    </div>
+                    <div className="search-bar-margin">
+                        <Link to="/All" className="custom-link" onClick={() => {
+                            window.scroll(0, 0);
+                        }}>
+                            <button className="search-bar">
+                                <img src={search} className="search-icon" alt="search-icon"/>
+                                <p className="search-bar-text">Wyszukaj</p>
+                            </button>
+                        </Link>
+                    </div>
+                    <div className="activity-container">
+                        <Link to="/register" className="custom-link" onClick={() => {
+                            window.scroll(0, 0);
+                        }}>
+                            <button className="register-button">Zarejestruj się</button>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+            <div className="margin"></div>
             <div className="login-box">
                 <div className="login-input-box">
                     <form className="form-container" onSubmit={handleSubmit}>
