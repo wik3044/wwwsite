@@ -163,7 +163,6 @@ const Register = () => {
                                 onChange={handleCaptchaChange}
                                 theme="dark"
                             />
-                            {errors.captcha && <p className="error">{errors.captcha}</p>}
                         </div>
                         <button type="submit">Zarejestruj się</button>
                     </form>

@@ -5,17 +5,17 @@ import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {FaSquareXTwitter} from "react-icons/fa6";
-import xbox from './Icons/xbox360.png';
-import ps3 from './Icons/ps3.png';
-import ps4 from './Icons/ps4.png';
 import { Link } from "react-router-dom";
-import xbox1 from './Icons/xbox1.png';
-import gamecube from './Icons/gamecube.png';
-import gameboy from './Icons/gameboy.png';
 import './Consoles.css';
 import {FaCcMastercard, FaCcPaypal, FaCcVisa, FaFacebookSquare, FaInstagramSquare, FaLinkedin} from "react-icons/fa";
+import canon310 from './Icons/CANON310XLSUPER8CINECAMERA-removebg-preview.png'
+import JVS from './Icons/JVSSuperVHSETProfessional-removebg-preview.png'
+import MINOLTAXL from './Icons/MINOLTAXL-660SOUNDSUPER8CINECAMERA-removebg-preview.png'
+import POLAROID170 from './Icons/POLAROID170BV-removebg-preview.png'
+import POLAROIDSUPER from './Icons/POLAROIDSUPERCOLOR635CL-removebg-preview.png'
+import SONYDCR from './Icons/SONYDCR-SR38HDDCAMCORDER-removebg-preview.png'
 
-function Consoles() {
+function Video() {
     return (
         <div className="App">
             <div className="header">
@@ -46,7 +46,7 @@ function Consoles() {
                 </div>
             </div>
             <div className="h2-margin">
-                <h2>Konsole</h2>
+                <h2>Sprzęt video</h2>
             </div>
             <div className="products-container-c">
                 <div className="category-row">
@@ -54,10 +54,10 @@ function Consoles() {
                         <div className="product-box">
                             <div className="product-sale-status"></div>
                             <div className="product-image-box">
-                                <img src={xbox} className="product-image" alt="xbox"></img>
+                                <img src={canon310} className="product-image" alt="canon310"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">Konsola Xbox 360</p>
+                                <p className="title-text">CANON 310XL SUPER 8 CIN...</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -70,10 +70,10 @@ function Consoles() {
                         <div className="product-box">
                             <div className="product-sale-status"></div>
                             <div className="product-image-box">
-                                <img src={ps3} className="product-image" alt="ps3"></img>
+                                <img src={JVS} className="product-image" alt="JVS"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">Konsola PlayStation 3</p>
+                                <p className="title-text">JVS Super VHS ET Professio...</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -86,10 +86,10 @@ function Consoles() {
                         <div className="product-box">
                             <div className="product-sale-status"></div>
                             <div className="product-image-box">
-                                <img src={ps4} className="product-image" alt="ps4"></img>
+                                <img src={MINOLTAXL} className="product-image" alt="MINOLTAXL"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">Konsola PlayStation 4</p>
+                                <p className="title-text">MINOLTA XL-660 SOUND S...</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -102,10 +102,10 @@ function Consoles() {
                         <div className="product-box">
                             <div className="product-sale-status"></div>
                             <div className="product-image-box">
-                                <img src={gamecube} className="product-image" alt="gamecube"></img>
+                                <img src={POLAROID170} className="product-image" alt="POLAROID170"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">Nintendo GameCube</p>
+                                <p className="title-text">POLAROID 170 BV</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -122,10 +122,10 @@ function Consoles() {
                         <div className="product-box">
                             <div className="product-sale-status"></div>
                             <div className="product-image-box">
-                                <img src={gameboy} className="product-image" alt="gameboy"></img>
+                                <img src={POLAROIDSUPER} className="product-image" alt="POLAROIDSUPER"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">Nintendo GameBoy</p>
+                                <p className="title-text">POLAROID SUPERCOLOR 635</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -138,10 +138,10 @@ function Consoles() {
                         <div className="product-box">
                             <div className="product-sale-status"></div>
                             <div className="product-image-box">
-                                <img src={xbox1} className="product-image" alt="xbox1"></img>
+                                <img src={SONYDCR} className="product-image" alt="SONYDCR"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">Konsola Xbox</p>
+                                <p className="title-text">SONY DCR-SR38 HDD CAM...</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -214,4 +214,4 @@ function Consoles() {
     );
 }
 
-export default Consoles;
+export default Video;
