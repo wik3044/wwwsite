@@ -9,6 +9,8 @@ import Consoles from "./Consoles";
 import Audio from "./Audio";
 import Video from "./Video";
 import All from "./All";
+import Products from "./products";
+import Product1 from "./1";
 
 import {
     createBrowserRouter,
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
     {
         path: "all",
         element: <All/>,
+    },
+    {
+        path: "Products",
+        element: <Products/>,
+    },
+    {
+        path: "products/1",
+        element: <Product1/>,
     },
 ]);
 

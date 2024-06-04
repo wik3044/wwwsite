@@ -92,12 +92,20 @@ function App() {
 
     const handleKeyPress = (event) => {
         if (event.key === 'Enter' && value) {
-            navigate('/All');
+            navigate(`/products?search=${encodeURIComponent(value)}`);
+            setValue('');
         }
     };
 
     const handleDelete = () => {
         setValue('');
+    };
+
+    const handleSearchIconClick = () => {
+        if (value) {
+            navigate(`/products?search=${encodeURIComponent(value)}`);
+            setValue('');
+        }
     };
 
     return (
@@ -112,16 +120,8 @@ function App() {
                         </Link>
                     </div>
                     <div className="search-bar-margin">
-                        {/*<Link to="/All" className="custom-link" onClick={() => {*/}
-                        {/*    window.scroll(0, 0);*/}
-                        {/*}}>*/}
-                        {/*    <button className="search-bar">*/}
-                        {/*        <img src={search} className="search-icon" alt="search-icon"/>*/}
-                        {/*        <input className="search-bar-text"></input>*/}
-                        {/*    </button>*/}
-                        {/*</Link>*/}
                         <button className={`search-bar ${value ? 'has-value' : ''}`}>
-                            <img src={search} className="search-icon" alt="search-icon"/>
+                            <img src={search} className="search-icon" alt="search-icon" onClick={handleSearchIconClick}/>
                             <input className="search-bar-input" value={value} onChange={(e) => setValue(e.target.value)}
                                    placeholder="Wyszukaj" onKeyPress={handleKeyPress} ></input>
                             {value && <FiDelete className="delete_icon" onClick={handleDelete} />}
@@ -435,7 +435,7 @@ function App() {
                                 <img src={retrocassete} className="product-image" alt="retrocassete"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">QFX RETRO-39 Casette Player</p>
+                                <p className="title-text">QFX RETRO-39 Casette Pl...</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -487,7 +487,7 @@ function App() {
                                 <img src={canon310} className="product-image" alt="canon310"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">CANON 310XL SUPER 8 CIN...</p>
+                                <p className="title-text">CANON 310XL SUPER 8 C...</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -503,7 +503,7 @@ function App() {
                                 <img src={JVS} className="product-image" alt="JVS"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">JVS Super VHS ET Professio...</p>
+                                <p className="title-text">JVS Super VHS ET Profes...</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -519,7 +519,7 @@ function App() {
                                 <img src={MINOLTAXL} className="product-image" alt="MINOLTAXL"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">MINOLTA XL-660 SOUND S...</p>
+                                <p className="title-text">MINOLTA XL-660 SOUND...</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -551,7 +551,7 @@ function App() {
                                 <img src={POLAROIDSUPER} className="product-image" alt="POLAROIDSUPER"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">POLAROID SUPERCOLOR 635</p>
+                                <p className="title-text">POLAROID SUPERCOLO...</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -567,7 +567,7 @@ function App() {
                                 <img src={SONYDCR} className="product-image" alt="SONYDCR"></img>
                             </div>
                             <div className="product-title">
-                                <p className="title-text">SONY DCR-SR38 HDD CAM...</p>
+                                <p className="title-text">SONY DCR-SR38 HDD C...</p>
                             </div>
                             <div className="product-price">
                                 <p className="price-text">od <s className="przekreslenie">81 zł</s> <b

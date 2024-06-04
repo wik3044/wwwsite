@@ -79,8 +79,6 @@ html {
 }
 
 .slider-margin,
-.info-item,
-.consoles-item,
 .audio-item,
 .video-item,
 .opinions-item {
@@ -123,6 +121,7 @@ html {
     width: 18px;
     margin-right: 10px;
     margin-left: 10px;
+    cursor: pointer;
 }
 .search-bar-text {
     font-family: inherit;
@@ -256,12 +255,13 @@ html {
 
 .info-item {
     width: 270px;
-    border-radius: 4px;
+    border-radius: 12px;
     height: 100px;
     text-align: center;
     align-content: center;
     color: white;
     display: flex;
+    border: 1px lightslategray solid;
 }
 
 .slider1 .slick-slide>div {
@@ -636,7 +636,7 @@ html {
     position: absolute;
     bottom: 0;
     margin-bottom: 85px;
-    font-weight: 600;
+    font-family: Rowdies, serif;
 }
 
 .product-price {
@@ -701,6 +701,7 @@ html {
     border: none;
     color: gray;
     width: 213px;
+    height: 32px;
 }
 
 .search-bar-input:focus {

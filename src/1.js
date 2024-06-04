@@ -1,7 +1,7 @@
 import './App.css';
 import search from './Icons/icons8-loupe-144.png';
 import logo from './Icons/retrotronics.png';
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,42 +10,21 @@ import {
     FaCcMastercard,
     FaCcPaypal,
     FaCcVisa,
-    FaFacebookSquare, FaHouseDamage,
+    FaFacebookSquare,
     FaInstagramSquare,
     FaLinkedin,
-    FaShieldAlt, FaTruck
 } from "react-icons/fa";
 import {FaSquareXTwitter} from "react-icons/fa6";
 import {BsPatchCheckFill} from "react-icons/bs";
 import xbox from './Icons/xbox360.png';
-import {MdDateRange} from "react-icons/md";
-import {BiSolidLike} from "react-icons/bi";
-import {AiOutlineClear} from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { MdRadioButtonChecked, MdRadioButtonUnchecked} from "react-icons/md";
+import {Link, useNavigate} from "react-router-dom";
+import {FiDelete} from "react-icons/fi";
+import {RxSlash} from "react-icons/rx";
+import "./1.css";
+import { LuAlarmClock } from "react-icons/lu";
 
 function Product1() {
-    const settings = {
-        draggable: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 10000,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
-
-    const multipleItemSettings = {
-        draggable: false,
-        arrows: false,
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-    };
-
     const opinionsItemSettings = {
         draggable: false,
         arrows: true,
@@ -65,38 +44,150 @@ function Product1() {
         opinions: useRef(null),
     };
 
+    const [value, setValue] = useState('');
+    const navigate = useNavigate();
+
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter' && value) {
+            navigate(`/products?search=${encodeURIComponent(value)}`);
+            setValue('');
+        }
+    };
+
+    const handleDelete = () => {
+        setValue('');
+    };
+
+    const handleSearchIconClick = () => {
+        if (value) {
+            navigate(`/products?search=${encodeURIComponent(value)}`);
+            setValue('');
+        }
+    };
+
     return (
         <div className="App">
             <div className="header">
                 <div className="header-container">
                     <div className="logo-margin">
-                        <Link to="/" onClick={() => {
-                            window.scroll(0, 0);
-                        }}>
+                        <Link to="/">
                             <img className="logo" src={logo} alt="logo"/>
                         </Link>
                     </div>
                     <div className="search-bar-margin">
-                        <Link to="/All" className="custom-link" onClick={() => {
-                            window.scroll(0, 0);
-                        }}>
-                            <button className="search-bar">
-                                <img src={search} className="search-icon" alt="search-icon"/>
-                                <p className="search-bar-text">Wyszukaj</p>
-                            </button>
-                        </Link>
+                        <button className={`search-bar ${value ? 'has-value' : ''}`}>
+                            <img src={search} className="search-icon" alt="search-icon"
+                                 onClick={handleSearchIconClick}/>
+                            <input className="search-bar-input" value={value} onChange={(e) => setValue(e.target.value)}
+                                   placeholder="Wyszukaj" onKeyPress={handleKeyPress}></input>
+                            {value && <FiDelete className="delete_icon" onClick={handleDelete}/>}
+                        </button>
                     </div>
                     <div className="activity-container">
-                        <Link to="/Login" className="custom-link" onClick={() => {
-                            window.scroll(0, 0);
-                        }}>
+                        <Link to="/Login">
                             <button className="login-button">Zaloguj się</button>
                         </Link>
-                        <Link to="/register" className="custom-link" onClick={() => {
-                            window.scroll(0, 0);
-                        }}>
+                        <Link to="/register">
                             <button className="register-button">Zarejestruj się</button>
                         </Link>
+                    </div>
+                </div>
+            </div>
+            <div className="navigation-buttons">
+                <Link to="/" onClick={() => {
+                    window.scroll(0, 0);
+                }}>
+                    <button className="navigation-buttons-button">Strona główna</button>
+                </Link>
+                <RxSlash className="navigation-buttons-slash-icon"/>
+                <Link to="/products" onClick={() => {
+                    window.scroll(0, 0);
+                }}>
+                    <button className="navigation-buttons-button">Produkty</button>
+                </Link>
+                <RxSlash className="navigation-buttons-slash-icon"/>
+                <Link to="/Consoles" onClick={() => {
+                    window.scroll(0, 0);
+                }}>
+                    <button className="navigation-buttons-button">Konsole</button>
+                </Link>
+            </div>
+            <div className="product-main-page-content">
+                <div className="product-main-page-content-left">
+                    <div className="searched-item-name-container">
+                        <p className="searched-item-name-text">Konsola Xbox 360</p>
+                    </div>
+                    <div className="product-main-page-content-left-image-box">
+                        <img className="product-main-page-content-left-image" src={xbox} alt={xbox}></img>
+                    </div>
+                    <div className="product-main-page-content-left-description-box">
+                        <p className="description-text-header-b">Opis produktu</p>
+                        <p className="description-text-header">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                        <p className="description-text-normal">Vivamus vitae dui ultrices, eleifend felis vitae, scelerisque nisi. Donec non ornare augue. Etiam sit amet ex pretium diam tincidunt efficitur ut ut ligula. Vestibulum ornare ipsum est, non molestie tortor lacinia vel. In hac habitasse platea dictumst. Ut et interdum eros, sed pellentesque ante. Pellentesque ac venenatis mauris, eu ultrices urna. Integer vitae euismod nunc. Integer odio tortor, mattis id tempus id, sodales et erat.</p>
+                        <p className="description-text-header">Quisque lectus justo, malesuada vel elit.</p>
+                        <p className="description-text-normal">Duis iaculis nec leo gravida lacinia. Donec elementum, dolor sit amet sollicitudin maximus, tortor enim volutpat quam, eget fermentum arcu est eu ligula. Nulla vel egestas dolor. Aliquam euismod metus sed magna sollicitudin placerat. Nunc a tristique sem. Suspendisse efficitur lacus nunc, sit amet congue orci molestie scelerisque. Vivamus ut massa porttitor, suscipit justo nec, gravida sem. Nullam consectetur ultrices lacus, nec mattis nibh vulputate quis. In sagittis venenatis augue quis sodales. Vivamus vestibulum consectetur nulla a suscipit. Praesent varius euismod leo, eget vehicula nisl cursus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In venenatis diam tempor eleifend posuere. Fusce non accumsan enim, quis interdum sem.</p>
+                        <p className="description-text-header">Sed pellentesque massa id turpis mollis.</p>
+                        <p className="description-text-normal">Praesent magna elit, suscipit in vestibulum sed, imperdiet et ante. Integer quis nunc maximus, euismod velit eget, pellentesque lorem. Quisque id nulla varius ante pretium bibendum quis vitae dolor. Phasellus eu tristique urna. Duis fermentum interdum sollicitudin. Duis sagittis in velit vel elementum. Integer blandit cursus ante, vitae euismod justo porta ut. Aenean nec est eget urna pellentesque luctus. Nunc non nisi id lorem viverra porttitor. Sed euismod magna nec risus tempus tempor. Mauris posuere, quam non rutrum malesuada, turpis nibh congue turpis, ac varius odio dui ac nisl. Sed porttitor suscipit gravida.</p>
+                    </div>
+                </div>
+                <div className="product-main-page-content-right">
+                    <div className="product-main-page-content-right-form">
+                        <div className="product-main-page-content-right-form-top">
+                            <div className="product-main-page-content-right-form-top-top">
+                                <p className="product-main-page-content-right-form-price-number">156</p>
+                                <p className="product-main-page-content-right-form-price-text">ZŁ za miesiąc (w tym
+                                    VAT)</p>
+                            </div>
+                            <div className="product-main-page-content-right-form-top-info">
+                                <LuAlarmClock className="product-main-page-content-right-form-top-info-icon"/>
+                                <p className="product-main-page-content-right-form-top-info-text">Nie czekaj, to ostatnie sztuki!</p>
+                            </div>
+                            <div className="product-main-page-content-right-form-plan">
+                                <p className="product-main-page-content-right-form-plan-text">Twój plan</p>
+                                <div className="product-main-page-content-right-form-plan-plans-box">
+                                    <button className="product-main-page-content-right-form-plan-plans-box-button">
+                                        <MdRadioButtonChecked
+                                            className="product-main-page-content-right-form-plan-plans-box-button-icon"/>
+                                        <p className="product-main-page-content-right-form-plan-plans-box-button-text">Subskrypcja</p>
+                                    </button>
+                                    <button className="product-main-page-content-right-form-plan-plans-box-button">
+                                        <MdRadioButtonUnchecked
+                                            className="product-main-page-content-right-form-plan-plans-box-button-icon"/>
+                                        <p className="product-main-page-content-right-form-plan-plans-box-button-text">Na
+                                            tydzień</p>
+                                    </button>
+                                </div>
+                                <p className="product-main-page-content-right-form-plan-text">Wybierz minimalny okres wynajmu</p>
+                                <div className="product-main-page-content-right-form-plan-price-box">
+                                    <p className="product-main-page-content-right-form-plan-text-lowered">Cena za mies.
+                                        przy wynajmie na 12 mies.:</p>
+                                    <p className="product-main-page-content-right-form-plan-text-lowered-r">156 zł</p>
+                                </div>
+                                <div className="product-main-page-content-right-form-plan-text-buttons">
+                                    <button className="product-main-page-content-right-form-plan-text-buttons-button">
+                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text">1+</p>
+                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text-m">mies.</p>
+                                    </button>
+                                    <button className="product-main-page-content-right-form-plan-text-buttons-button">
+                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text">3+</p>
+                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text-m">mies.</p>
+                                    </button>
+                                    <button className="product-main-page-content-right-form-plan-text-buttons-button">
+                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text">6+</p>
+                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text-m">mies.</p>
+                                    </button>
+                                    <button className="product-main-page-content-right-form-plan-text-buttons-button">
+                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text">12+</p>
+                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text-m">mies.</p>
+                                    </button>
+                                </div>
+                                <div className="product-main-page-content-right-form-plan-submit">
+                                    <button className="product-main-page-content-right-form-plan-submit-button">
+                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text-submit">Wynajmij teraz</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -340,8 +431,10 @@ function Product1() {
                 </Link>
             </div>
             <div className="copywrites">
-                <p className="copy-text">© 2024 Vintage.com S.A. Wszelkie prawa zastrzeżone Regulamin / Polityka prywatności</p>
-                <p className="copy-text">Kapitał zakładowy: 212 248,40 zł (opłacony w całości), KRS: 0000985653, Sąd Rejonowy dla m.st. Lódź — XII Wydział KRS</p>
+                <p className="copy-text">© 2024 Vintage.com S.A. Wszelkie prawa zastrzeżone Regulamin / Polityka
+                    prywatności</p>
+                <p className="copy-text">Kapitał zakładowy: 212 248,40 zł (opłacony w całości), KRS: 0000985653, Sąd
+                    Rejonowy dla m.st. Lódź — XII Wydział KRS</p>
             </div>
         </div>
     );
