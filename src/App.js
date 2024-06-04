@@ -143,21 +143,21 @@ function App() {
             </div>
             <div className="categories">
                 <div className="categories-container">
-                    <Link to="Consoles" className="custom-link">
+                    <Link to="/products?search=konsole" className="custom-link">
                         <div className="category-item" onClick={() => {
                             window.scroll(0, 0);
                         }}>
                             <h3 className="category-item-name">Konsole</h3>
                         </div>
                     </Link>
-                    <Link to="Audio" className="custom-link" onClick={() => {
+                    <Link to="/products?search=audio" className="custom-link" onClick={() => {
                         window.scroll(0, 0);
                     }}>
                         <div className="category-item">
                             <h3 className="category-item-name">Sprzęt audio</h3>
                         </div>
                     </Link>
-                    <Link to="Video" className="custom-link" onClick={() => {
+                    <Link to="/products?search=video" className="custom-link" onClick={() => {
                         window.scroll(0, 0);
                     }}>
                         <div className="category-item">

@@ -1,45 +1,13 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-@media (max-width: 1180px) {
-    /*.info-buttons {*/
-    /*    background-color: rebeccapurple;*/
-    /*    width: auto;*/
-    /*}*/
-
-    /*.info-button-prev,*/
-    /*.info-button-next {*/
-
-    /*}*/
-}
-/*@media (max-width: 700px) {*/
-/*    .search-bar {*/
-/*        display: none;*/
-/*    }*/
-/*}*/
-/*@media (min-width: 0px) {*/
-/*    html {*/
-/*        font-size: 13px;*/
-/*    }*/
-/*}*/
-/*@media (min-width: 1180px) {*/
-/*    html {*/
-/*        font-size: 14px;*/
-/*    }*/
-/*}*/
 html {
     font-family: inherit;
     background-color: #191B1F;
 }
-.App {
-    /*display: block;*/
-}
 
-/*header start */
 .header {
     display: flex;
-    /*background-color: #2e8555;*/
     background-color: #24272C;
-    /*border-bottom: 1px solid #eee;*/
     align-content: center;
     height: 60px;
 }
@@ -138,10 +106,6 @@ html {
     margin-left: 20px;
 }
 
-/*header end */
-
-/*category start*/
-
 .categories {
     display: flex;
     align-content: center;
@@ -180,10 +144,6 @@ html {
     color: white;
     font-size: 15px;
 }
-
-/*category end*/
-
-/*news start*/
 
 .news-container {
     height: 400px;
@@ -403,7 +363,6 @@ html {
     height: auto;
     width: auto;
     margin: 24px;
-    /*background-color: red;*/
     font-family: inherit;
 }
 
@@ -611,14 +570,8 @@ html {
 
 .product-box:hover {
     border: 1px solid #75DDDD;
-    /*border: 1px solid white;*/
 }
 
-.product-sale-status {
-    /*height: 12px;*/
-    /*width: auto;*/
-    /*padding: 16px;*/
-}
 
 .product-image-box {
     width: auto;

@@ -5,9 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Register from "./Register";
 import Login from "./Login";
-import Consoles from "./Consoles";
-import Audio from "./Audio";
-import Video from "./Video";
 import All from "./All";
 import Products from "./products";
 import Product1 from "./1";
@@ -29,18 +26,6 @@ const router = createBrowserRouter([
     {
         path: "login",
         element: <Login/>,
-    },
-    {
-        path: "consoles",
-        element: <Consoles/>,
-    },
-    {
-        path: "audio",
-        element: <Audio/>,
-    },
-    {
-        path: "video",
-        element: <Video/>,
     },
     {
         path: "all",
