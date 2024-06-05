@@ -29,6 +29,15 @@
 .product-main-page-content-left-image {
     width: 500px;
     height: auto;
+    margin-top: 30px;
+}
+
+.product-main-page-content-left-image-d {
+    .product-main-page-content-left-image {
+        height: 450px;
+        width: auto;
+        margin-top: 30px;
+    }
 }
 
 .product-main-page-content-right-form {

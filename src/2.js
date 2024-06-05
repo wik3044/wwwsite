@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 import {FaSquareXTwitter} from "react-icons/fa6";
 import {BsPatchCheckFill} from "react-icons/bs";
-import xbox from './Icons/xbox360.png';
+import ps3 from './Icons/ps3.png';
 import { MdRadioButtonChecked, MdRadioButtonUnchecked} from "react-icons/md";
 import {Link, useNavigate} from "react-router-dom";
 import {FiDelete} from "react-icons/fi";
@@ -24,7 +24,7 @@ import {RxSlash} from "react-icons/rx";
 import "./1.css";
 import { LuAlarmClock } from "react-icons/lu";
 
-function Product1() {
+function Product2() {
     const opinionsItemSettings = {
         draggable: false,
         arrows: true,
@@ -115,10 +115,10 @@ function Product1() {
             <div className="product-main-page-content">
                 <div className="product-main-page-content-left">
                     <div className="searched-item-name-container">
-                        <p className="searched-item-name-text">Konsola Xbox 360</p>
+                        <p className="searched-item-name-text">Konsola PlayStation 3</p>
                     </div>
                     <div className="product-main-page-content-left-image-box">
-                        <img className="product-main-page-content-left-image" src={xbox} alt={xbox}></img>
+                        <img className="product-main-page-content-left-image" src={ps3} alt={ps3}></img>
                     </div>
                     <div className="product-main-page-content-left-description-box">
                         <p className="description-text-header-b">Opis produktu</p>
@@ -447,4 +447,4 @@ function Product1() {
     );
 }
 
-export default Product1;
+export default Product2;

@@ -245,15 +245,37 @@ function Products() {
                     </div>
                     <div className="products-container-c-c">
                         <div className="category-row-products">
-                            <Link to="/products/1">
                                 <div className="product-box-test">
+                                    <Link to="/products/1" onClick={() => {
+                                        window.scroll(0, 0);
+                                    }}>
+                                        <div className="product-box">
+                                            <div className="product-sale-status"></div>
+                                            <div className="product-image-box">
+                                                <img src={xbox} className="product-image" alt="xbox"></img>
+                                            </div>
+                                            <div className="product-title">
+                                                <p className="title-text">Konsola Xbox 360</p>
+                                            </div>
+                                            <div className="product-price">
+                                                <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                    className="pogrubienie">77 zł</b> / miesiąc</p>
+                                                <p className="price-text">lub 84 zł / 7 dni</p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                </div>
+                            <div className="product-box-test">
+                                <Link to="/products/2" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
                                     <div className="product-box">
                                         <div className="product-sale-status"></div>
                                         <div className="product-image-box">
-                                            <img src={xbox} className="product-image" alt="xbox"></img>
+                                            <img src={ps3} className="product-image" alt="ps3"></img>
                                         </div>
                                         <div className="product-title">
-                                            <p className="title-text">Konsola Xbox 360</p>
+                                            <p className="title-text">Konsola PlayStation 3</p>
                                         </div>
                                         <div className="product-price">
                                             <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
@@ -261,201 +283,228 @@ function Products() {
                                             <p className="price-text">lub 84 zł / 7 dni</p>
                                         </div>
                                     </div>
-                                </div>
-                            </Link>
-                            <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={ps3} className="product-image" alt="ps3"></img>
-                                    </div>
-                                    <div className="product-title">
-                                        <p className="title-text">Konsola PlayStation 3</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={ps4} className="product-image" alt="ps4"></img>
+                                <Link to="/products/3" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={ps4} className="product-image" alt="ps4"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">Konsola PlayStation 4</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">Konsola PlayStation 4</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
                     <div className="products-container-c-c">
                         <div className="category-row-products">
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={gamecube} className="product-image" alt="gamecube"></img>
+                                <Link to="/products/4" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={gamecube} className="product-image" alt="gamecube"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">Nintendo GameCube</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">Nintendo GameCube</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={gameboy} className="product-image" alt="gameboy"></img>
+                                <Link to="/products/5" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={gameboy} className="product-image" alt="gameboy"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">Nintendo GameBoy</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">Nintendo GameBoy</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={xbox1} className="product-image" alt="xbox1"></img>
+                                <Link to="/products/6" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={xbox1} className="product-image" alt="xbox1"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">Konsola Xbox</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">Konsola Xbox</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="products-container-c-c">
-                        <div className="category-row-products">
-                            <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={majestic} className="product-image" alt="majestic"></img>
-                                    </div>
-                                    <div className="product-title">
-                                        <p className="title-text">Zestaw Stereo "Majestic"</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={boombox} className="product-image" alt="boombox"></img>
-                                    </div>
-                                    <div className="product-title">
-                                        <p className="title-text">Lasonic L30K Boombox</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={sonywalker} className="product-image" alt="sonywalker"></img>
-                                    </div>
-                                    <div className="product-title">
-                                        <p className="title-text">Sony Walkman</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
                     <div className="products-container-c-c">
                         <div className="category-row-products">
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={gramofon} className="product-image" alt="gramofon"></img>
+                                <Link to="/products/7" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={majestic} className="product-image" alt="majestic"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">Zestaw Stereo "Majestic"</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">Gramofon 1ByOne</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={retrocassete} className="product-image" alt="retrocassete"></img>
+                                <Link to="/products/8" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={boombox} className="product-image" alt="boombox"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">Lasonic L30K Boombox</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">QFX RETRO-39 Casette Pl...</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={system} className="product-image" alt="system"></img>
+                                <Link to="/products/9" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={sonywalker} className="product-image" alt="sonywalker"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">Sony Walkman</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">System Stereo OCDR2</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
                     <div className="products-container-c-c">
                         <div className="category-row-products">
                             <div className="product-box-test">
+                                <Link to="/products/10" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={gramofon} className="product-image" alt="gramofon"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">Gramofon 1ByOne</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                            <div className="product-box-test">
+                                <Link to="/products/11" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={retrocassete} className="product-image" alt="retrocassete"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">QFX RETRO-39 Casette Pl...</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                            <div className="product-box-test">
+                                <Link to="/products/12" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={system} className="product-image" alt="system"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">System Stereo OCDR2</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="products-container-c-c">
+                        <div className="category-row-products">
+                            <div className="product-box-test">
+                                <Link to="/products/13" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
                                 <div className="product-box">
                                     <div className="product-sale-status"></div>
                                     <div className="product-image-box">
@@ -470,90 +519,112 @@ function Products() {
                                         <p className="price-text">lub 84 zł / 7 dni</p>
                                     </div>
                                 </div>
+                                </Link>
                             </div>
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={JVS} className="product-image" alt="JVS"></img>
+                                <Link to="/products/14" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={JVS} className="product-image" alt="JVS"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">JVS Super VHS ET Profes...</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">JVS Super VHS ET Profes...</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={MINOLTAXL} className="product-image" alt="MINOLTAXL"></img>
+                                <Link to="/products/15" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={MINOLTAXL} className="product-image" alt="MINOLTAXL"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">MINOLTA XL-660 SOUND...</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">MINOLTA XL-660 SOUND...</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
                     <div className="products-container-c-c">
                         <div className="category-row-products">
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={POLAROID170} className="product-image" alt="POLAROID170"></img>
+                                <Link to="/products/16" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={POLAROID170} className="product-image" alt="POLAROID170"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">POLAROID 170 BV</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">POLAROID 170 BV</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={POLAROIDSUPER} className="product-image" alt="POLAROIDSUPER"></img>
+                                <Link to="/products/17" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={POLAROIDSUPER} className="product-image"
+                                                 alt="POLAROIDSUPER"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">POLAROID SUPERCOLOR...</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">POLAROID SUPERCOLOR...</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="product-box-test">
-                                <div className="product-box">
-                                    <div className="product-sale-status"></div>
-                                    <div className="product-image-box">
-                                        <img src={SONYDCR} className="product-image" alt="SONYDCR"></img>
+                                <Link to="/products/18" onClick={() => {
+                                    window.scroll(0, 0);
+                                }}>
+                                    <div className="product-box">
+                                        <div className="product-sale-status"></div>
+                                        <div className="product-image-box">
+                                            <img src={SONYDCR} className="product-image" alt="SONYDCR"></img>
+                                        </div>
+                                        <div className="product-title">
+                                            <p className="title-text">SONY DCR-SR38 HDD C...</p>
+                                        </div>
+                                        <div className="product-price">
+                                            <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
+                                                className="pogrubienie">77 zł</b> / miesiąc</p>
+                                            <p className="price-text">lub 84 zł / 7 dni</p>
+                                        </div>
                                     </div>
-                                    <div className="product-title">
-                                        <p className="title-text">SONY DCR-SR38 HDD C...</p>
-                                    </div>
-                                    <div className="product-price">
-                                        <p className="price-text">od <s className="przekreslenie">81 zł</s> <b
-                                            className="pogrubienie">77 zł</b> / miesiąc</p>
-                                        <p className="price-text">lub 84 zł / 7 dni</p>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                     </div>

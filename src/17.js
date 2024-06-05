@@ -16,15 +16,15 @@ import {
 } from "react-icons/fa";
 import {FaSquareXTwitter} from "react-icons/fa6";
 import {BsPatchCheckFill} from "react-icons/bs";
-import xbox from './Icons/xbox360.png';
 import { MdRadioButtonChecked, MdRadioButtonUnchecked} from "react-icons/md";
 import {Link, useNavigate} from "react-router-dom";
 import {FiDelete} from "react-icons/fi";
 import {RxSlash} from "react-icons/rx";
 import "./1.css";
 import { LuAlarmClock } from "react-icons/lu";
+import POLAROIDSUPER from './Icons/POLAROIDSUPERCOLOR635CL-removebg-preview.png';
 
-function Product1() {
+function Product17() {
     const opinionsItemSettings = {
         draggable: false,
         arrows: true,
@@ -106,19 +106,19 @@ function Product1() {
                     <button className="navigation-buttons-button">Produkty</button>
                 </Link>
                 <RxSlash className="navigation-buttons-slash-icon"/>
-                <Link to="/products?search=konsole" onClick={() => {
+                <Link to="/products?search=video" onClick={() => {
                     window.scroll(0, 0);
                 }}>
-                    <button className="navigation-buttons-button">Konsole</button>
+                    <button className="navigation-buttons-button">Video</button>
                 </Link>
             </div>
             <div className="product-main-page-content">
                 <div className="product-main-page-content-left">
                     <div className="searched-item-name-container">
-                        <p className="searched-item-name-text">Konsola Xbox 360</p>
+                        <p className="searched-item-name-text">POLAROID SUPERCOLOR 635 CL</p>
                     </div>
                     <div className="product-main-page-content-left-image-box">
-                        <img className="product-main-page-content-left-image" src={xbox} alt={xbox}></img>
+                        <img className="product-main-page-content-left-image" src={POLAROIDSUPER} alt={POLAROIDSUPER}></img>
                     </div>
                     <div className="product-main-page-content-left-description-box">
                         <p className="description-text-header-b">Opis produktu</p>
@@ -447,4 +447,4 @@ function Product1() {
     );
 }
 
-export default Product1;
+export default Product17;

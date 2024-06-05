@@ -196,7 +196,9 @@ const Register = () => {
                                 theme="dark"
                             />
                         </div>
-                        <button type="submit">Zarejestruj się</button>
+                        <Link to="/" className="custom-link">
+                            <button type="submit">Zarejestruj się</button>
+                        </Link>
                     </form>
                 </div>
             </div>

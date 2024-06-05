@@ -154,7 +154,9 @@ const Login = () => {
                             />
                             {errors.captcha && <p className="error">{errors.captcha}</p>}
                         </div>
-                        <button type="submit">Zaloguj się</button>
+                        <Link to="/" className="custom-link">
+                            <button type="submit">Zaloguj się</button>
+                        </Link>
                     </form>
                 </div>
             </div>
