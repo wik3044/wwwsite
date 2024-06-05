@@ -1,7 +1,7 @@
 import './App.css';
 import search from './Icons/icons8-loupe-144.png';
 import logo from './Icons/retrotronics.png';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {
@@ -93,7 +93,7 @@ function Payment() {
         }
     };
 
-    const isFormValid = () => {
+    const isFormValid = useCallback(() => {
         return (
             email &&
             validateEmail(email) &&
@@ -102,13 +102,13 @@ function Payment() {
             phone &&
             validatePhone(phone)
         );
-    };
+    }, [email, zip, phone]);
 
     useEffect(() => {
         if (submitted && isFormValid()) {
             navigate("/");
         }
-    }, [submitted, navigate, email, zip, phone]);
+    }, [submitted, navigate, isFormValid]);
 
     return (
         <div className="App">
