@@ -23,7 +23,7 @@ import ps4 from './Icons/ps4.png';
 import {MdDateRange} from "react-icons/md";
 import {BiSolidLike} from "react-icons/bi";
 import {AiOutlineClear} from "react-icons/ai";
-import {Link, Route, Router, Routes, useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import boombox from './Icons/boombox.png'
 import gramofon from './Icons/gramofon.png'
 import majestic from './Icons/majestic.png'
@@ -44,7 +44,6 @@ import news2 from './Icons/news2.jpg'
 import news3 from './Icons/news3.jpg'
 import news4 from './Icons/news4.jpg'
 import { FiDelete } from "react-icons/fi";
-import Notfound from './Notfound'
 
 function App() {
     const settings = {
