@@ -63,13 +63,15 @@
 
 .product-main-page-content-right-form-price-number {
     margin: 0 6px 0 0;
-    font-family: Rowdies, serif;
+    font-family: Roboto, serif;
+    font-weight: bold;
     font-size: 30px;
 }
 
 .product-main-page-content-right-form-price-text {
     margin: 0;
-    font-family: Rowdies, serif;
+    font-family: Roboto, serif;
+    font-weight: bold;
 }
 
 .product-main-page-content-right-form-top-info {
@@ -79,6 +81,7 @@
     margin-bottom: 10px;
     padding-bottom: 15px;
     border-bottom: 1px lightslategray solid;
+    font-weight: bold;
 }
 
 .product-main-page-content-right-form-top-info-icon {
@@ -93,7 +96,7 @@
 }
 
 .product-main-page-content-right-form-plan {
-    font-family: Rowdies, serif;
+    font-family: Roboto, serif;
     color: white;
     padding-top: 8px;
 }
@@ -132,8 +135,7 @@
 }
 
 .product-main-page-content-right-form-plan-plans-box-button-text {
-    font-family: Rowdies, serif;
-    font-weight: 200;
+    font-family: Roboto, serif;
     margin: 0;
 }
 
@@ -141,11 +143,11 @@
     display: flex;
     width: auto;
     height: auto;
+    justify-content: space-between;
 }
 
 .product-main-page-content-right-form-plan-text-lowered{
-    font-family: Rowdies, serif;
-    font-weight: 200;
+    font-family: Roboto, serif;
     color: white;
     font-size: 15px;
     margin: 0;
@@ -153,11 +155,10 @@
 
 .product-main-page-content-right-form-plan-text-lowered-r {
     display: flex;
-    font-family: Rowdies, serif;
-    font-weight: 200;
+    font-family: Roboto, serif;
     color: white;
     font-size: 15px;
-    margin: 0 0 0 60px;
+    margin: 0;
 }
 
 .product-main-page-content-right-form-plan-text-buttons {
@@ -184,17 +185,15 @@
 }
 
 .product-main-page-content-right-form-plan-text-buttons-button-text {
-    font-family: Rowdies, serif;
+    font-family: Roboto, serif;
     font-size: 18px;
-    font-weight: 200;
     color: white;
     margin: 0;
 }
 
 .product-main-page-content-right-form-plan-text-buttons-button-text-m {
-    font-family: Rowdies, serif;
+    font-family: Roboto, serif;
     font-size: 14px;
-    font-weight: 200;
     color: white;
     margin: 0;
 }
@@ -223,21 +222,44 @@
 }
 
 .description-text-header-b {
-    font-family: Rowdies, serif;
+    font-family: Roboto, serif;
     color: white;
     font-size: 24px;
 }
 
 .description-text-header {
-    font-family: Rowdies, serif;
+    font-family: Roboto, serif;
     color: white;
     font-size: 20px;
-    font-weight: 200;
 }
 
 .description-text-normal {
-    font-family: Rowdies, serif;
+    font-family: Roboto, serif;
     color: white;
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 300;
+}
+
+.product-main-page-content-right-form-plan-text-buttons-button-current {
+    width: 95px;
+    height: auto;
+    border: 1px #75DDDD solid;
+    padding: 10px 0;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.product-main-page-content-right-form-plan-text-buttons-button-text-current {
+    font-family: Roboto, serif;
+    font-size: 18px;
+    margin: 0;
+    color: #75DDDD;
+}
+
+.product-main-page-content-right-form-plan-text-buttons-button-text-m-current {
+    font-family: Roboto, serif;
+    font-size: 14px;
+    margin: 0;
+    color: #75DDDD;
 }
