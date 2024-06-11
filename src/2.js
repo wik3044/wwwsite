@@ -164,9 +164,10 @@ function Product2() {
                                     <p className="product-main-page-content-right-form-plan-text-lowered-r">156 zł</p>
                                 </div>
                                 <div className="product-main-page-content-right-form-plan-text-buttons">
-                                    <button className="product-main-page-content-right-form-plan-text-buttons-button">
-                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text">1+</p>
-                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text-m">mies.</p>
+                                    <button
+                                        className="product-main-page-content-right-form-plan-text-buttons-button-current">
+                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text-current">1+</p>
+                                        <p className="product-main-page-content-right-form-plan-text-buttons-button-text-m-current">mies.</p>
                                     </button>
                                     <button className="product-main-page-content-right-form-plan-text-buttons-button">
                                         <p className="product-main-page-content-right-form-plan-text-buttons-button-text">3+</p>
