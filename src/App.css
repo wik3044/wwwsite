@@ -589,7 +589,7 @@ html {
     position: absolute;
     bottom: 0;
     margin-bottom: 85px;
-    font-family: Rowdies, serif;
+    font-weight: bold;
 }
 
 .product-price {
