@@ -248,14 +248,13 @@ function Payment() {
                             {errors.phone && <span className="error">{errors.phone}</span>}
                         </div>
 
-                        <button type="submit" disabled={!isFormValid()} className="payment-submit-button-button">Zakup</button>
+                        <Link to="/pay" className="custom-link">
+                            <button type="submit" className="payment-submit-button-button">Przejdź do strony płatności kartą</button>
+                        </Link>
                     </form>
                 </div>
                 <div className="payment-form-right">
                     <div className="cart-summary">
-                        {/*<div className="payment-item-image-box">*/}
-                        {/*    <img src={xbox} className="payment-item-image"></img>*/}
-                        {/*</div>*/}
                         <div className="cart-item">
                             <img src={xbox} alt="Konsola Xbox 360"/>
                             <div className="cart-item-details">

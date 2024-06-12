@@ -2,9 +2,10 @@ import React from "react";
 import './Login.css'
 import { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import logo from "./Icons/retrotronics.png";
 import search from "./Icons/icons8-loupe-144.png";
+import {FiDelete} from "react-icons/fi";
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -79,6 +80,27 @@ const Login = () => {
         }));
     };
 
+    const [value, setValue] = useState('');
+    const navigate = useNavigate();
+
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter' && value) {
+            navigate(`/products?search=${encodeURIComponent(value)}`);
+            setValue('');
+        }
+    };
+
+    const handleDelete = () => {
+        setValue('');
+    };
+
+    const handleSearchIconClick = () => {
+        if (value) {
+            navigate(`/products?search=${encodeURIComponent(value)}`);
+            setValue('');
+        }
+    };
+
     return (
         <div className="login">
             <div className="header">
@@ -91,14 +113,13 @@ const Login = () => {
                         </Link>
                     </div>
                     <div className="search-bar-margin">
-                        <Link to="/All" className="custom-link" onClick={() => {
-                            window.scroll(0, 0);
-                        }}>
-                            <button className="search-bar">
-                                <img src={search} className="search-icon" alt="search-icon"/>
-                                <p className="search-bar-text">Wyszukaj</p>
-                            </button>
-                        </Link>
+                        <button className={`search-bar ${value ? 'has-value' : ''}`}>
+                            <img src={search} className="search-icon" alt="search-icon"
+                                 onClick={handleSearchIconClick}/>
+                            <input className="search-bar-input" value={value} onChange={(e) => setValue(e.target.value)}
+                                   placeholder="Wyszukaj" onKeyPress={handleKeyPress}></input>
+                            {value && <FiDelete className="delete_icon" onClick={handleDelete}/>}
+                        </button>
                     </div>
                     <div className="activity-container">
                         <Link to="/register" className="custom-link" onClick={() => {

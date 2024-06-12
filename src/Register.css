@@ -86,3 +86,9 @@
     height: 64px;
     width: auto;
 }
+
+.checkbox {
+    display: flex;
+    margin: 0;
+    gap: 10px;
+}

@@ -8,6 +8,7 @@ import Login from "./Login";
 import All from "./All";
 import Products from "./products";
 import Payment from "./payment";
+import Pay from "./Pay";
 import Product1 from "./1";
 import Product2 from "./2";
 import Product3 from "./3";
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
     {
         path: "all",
         element: <All/>,
+    },
+    {
+        path: "pay",
+        element: <Pay/>,
     },
     {
         path: "Products",
